@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delete Account & Data Deletion — VaultGuard-Password Manager</title>
+  <title>Account & Data Deletion — VaultGuard-Password Manager</title>
   <meta name="description" content="Official Account and Data Deletion Request instructions for VaultGuard-Password Manager. Learn how to permanently delete your cloud account and all associated data." />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -20,7 +20,7 @@
   <div class="ambient-glow glow-1"></div>
   <div class="ambient-glow glow-2"></div>
 
-  <!-- Navigation -->
+  <!-- Primary Navigation Bar -->
   <header class="navbar">
     <div class="container nav-content">
       <a href="index.html" class="brand">
@@ -44,106 +44,211 @@
         <li><a href="index.html#features">Features</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
         <li><a href="delete-account.html" class="active">Delete Account</a></li>
+        <li><a href="index.html#download" class="nav-cta">Get App</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main Content Area -->
   <main class="legal-page">
     <div class="container">
       <div class="legal-card">
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <a href="privacy.html">Legal &amp; Privacy</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <span class="breadcrumb-current">Account &amp; Data Deletion</span>
+        </nav>
+
+        <!-- Header -->
         <header class="legal-header">
-          <h1 class="legal-title">Account & Data Deletion Request</h1>
+          <h1 class="legal-title">Account &amp; Data Deletion Request</h1>
           <p class="legal-meta">
-            <strong>App:</strong> VaultGuard-Password Manager &bull; 
+            <strong>Application:</strong> VaultGuard-Password Manager &bull; 
             <strong>Developer:</strong> VaultGuard Security Engineering / Junaid Ikram &bull; 
             <strong>Last Updated:</strong> October 2026
           </p>
         </header>
 
-        <section class="legal-section">
-          <h2 class="legal-section-title">Overview</h2>
+        <!-- Quick Jump Navigation Pills -->
+        <nav class="quick-nav-pills" aria-label="Quick section navigation">
+          <a href="#in-app-steps" class="pill-btn">📱 In-App Steps</a>
+          <a href="#email-steps" class="pill-btn">✉️ Email Request</a>
+          <a href="#data-deleted" class="pill-btn">🗑️ Data Deleted</a>
+          <a href="#data-retained" class="pill-btn">🛡️ Retained Data</a>
+          <a href="#retention-period" class="pill-btn">⏱️ Retention Policy</a>
+          <a href="#contact-support" class="pill-btn">💬 Contact</a>
+        </nav>
+
+        <!-- Section 1: Overview -->
+        <section class="legal-section" id="overview">
+          <h2 class="legal-section-title">1. Overview &amp; User Sovereignty</h2>
           <p class="legal-text">
-            At <strong>VaultGuard-Password Manager</strong>, we are committed to complete user sovereignty and full compliance with Google Play's User Data & Account Deletion policies, GDPR, and CCPA. Users have the absolute right to permanently delete their account and all associated cloud data at any time.
+            At <strong>VaultGuard-Password Manager</strong>, privacy is our core architectural commitment. In full compliance with Google Play's User Data &amp; Account Deletion policies, GDPR (Article 17 &mdash; Right to Erasure), and CCPA, every user maintains complete, unilateral control over their cloud account and data.
+          </p>
+          <p class="legal-text">
+            You may permanently delete your cloud account, all cryptographic identities, and all cloud-stored vault records at any time with zero cooldowns or mandatory waiting periods.
           </p>
         </section>
 
-        <section class="legal-section">
-          <h2 class="legal-section-title">How to Delete Your Account and Data</h2>
-          <p class="legal-text">You can request account deletion using either of the following two methods:</p>
+        <!-- Section 2: How to Delete -->
+        <section class="legal-section" id="how-to-delete">
+          <h2 class="legal-section-title">2. How to Request Account &amp; Data Deletion</h2>
+          <p class="legal-text">You have two convenient methods to execute permanent deletion:</p>
           
-          <div style="background: var(--bg-surface-alt, #f8fafc); border: 1px solid var(--border-color, #e2e8f0); border-radius: 12px; padding: 20px; margin: 16px 0;">
-            <h3 style="margin-top: 0; color: var(--accent-primary, #2563eb); font-size: 1.15rem;">Method 1: Directly Inside the App (Instant)</h3>
-            <p class="legal-text" style="margin-bottom: 8px;">If you have the VaultGuard app installed on your device:</p>
-            <ol class="legal-list" style="margin-top: 4px;">
-              <li>Open <strong>VaultGuard</strong> on your Android device and unlock your vault.</li>
-              <li>Tap the <strong>Settings</strong> icon (gear icon) in the navigation bar.</li>
-              <li>Select <strong>Cloud & Multi-Device Sync</strong>.</li>
-              <li>Scroll down to the danger zone and tap <strong>"Delete Cloud Account & All Data"</strong>.</li>
-              <li>Enter your cloud account password to confirm your identity.</li>
-              <li>Confirm the deletion prompt. Your account and cloud records are immediately and permanently erased from Google Cloud servers.</li>
+          <!-- Method 1: In-App -->
+          <div style="background: var(--bg-surface-alt, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0); border-radius: 12px; padding: 22px; margin: 18px 0;" id="in-app-steps">
+            <h3 style="margin-top: 0; color: var(--accent-primary, #2563eb); font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
+              <span>📱 Method 1: Inside the VaultGuard App (Instant — Recommended)</span>
+            </h3>
+            <p class="legal-text" style="margin-bottom: 10px;">If you have the VaultGuard app installed on your Android device:</p>
+            <ol class="legal-list" style="margin-top: 6px;">
+              <li>Open <strong>VaultGuard</strong> and unlock your vault using your Master Password or Biometrics.</li>
+              <li>Tap the <strong>Settings</strong> tab (gear icon) in the bottom navigation bar.</li>
+              <li>Select <strong>Cloud &amp; Multi-Device Sync</strong>.</li>
+              <li>Scroll down to the <em>Danger Zone</em> section and tap <strong>"Delete Cloud Account &amp; All Data"</strong>.</li>
+              <li>Enter your cloud account password when prompted to authenticate ownership.</li>
+              <li>Confirm the permanent deletion dialog.</li>
             </ol>
+            <p class="legal-text" style="font-size: 0.88rem; color: #64748b; margin-bottom: 0;">
+              ⚡ <em>Outcome:</em> Your cloud authentication account, Firestore vault ciphertext, device trust keys, and session cookies are purged immediately from Google Cloud servers.
+            </p>
           </div>
 
-          <div style="background: var(--bg-surface-alt, #f8fafc); border: 1px solid var(--border-color, #e2e8f0); border-radius: 12px; padding: 20px; margin: 16px 0;">
-            <h3 style="margin-top: 0; color: var(--accent-primary, #2563eb); font-size: 1.15rem;">Method 2: Web / Email Request (If App is Uninstalled)</h3>
-            <p class="legal-text" style="margin-bottom: 8px;">If you have uninstalled the app or cannot access your device:</p>
-            <ol class="legal-list" style="margin-top: 4px;">
-              <li>Send an email to our data privacy team at: <a href="mailto:junaidikram17@gmail.com" style="color: var(--accent-primary); font-weight: 600;">junaidikram17@gmail.com</a></li>
+          <!-- Method 2: Email Request -->
+          <div style="background: var(--bg-surface-alt, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0); border-radius: 12px; padding: 22px; margin: 18px 0;" id="email-steps">
+            <h3 style="margin-top: 0; color: var(--accent-primary, #2563eb); font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
+              <span>✉️ Method 2: Web &amp; Email Request (If App is Uninstalled)</span>
+            </h3>
+            <p class="legal-text" style="margin-bottom: 10px;">If you have uninstalled the app or no longer have access to your mobile device:</p>
+            <ol class="legal-list" style="margin-top: 6px;">
+              <li>Send an email directly to: <a href="mailto:junaidikram17@gmail.com" style="color: var(--accent-primary); font-weight: 600;">junaidikram17@gmail.com</a></li>
               <li>Use the subject line: <strong>"VaultGuard Account Deletion Request"</strong>.</li>
-              <li>Include the <strong>email address</strong> registered with your VaultGuard Cloud account.</li>
-              <li>Our automated systems will verify account ownership and execute complete deletion of all records within <strong>48 hours</strong>. You will receive an email confirmation upon completion.</li>
+              <li>Provide the <strong>registered email address</strong> used for your VaultGuard cloud sync account.</li>
+              <li>Our compliance engineering team will verify ownership and trigger complete cloud erasure within <strong>48 hours</strong>.</li>
             </ol>
+            <p class="legal-text" style="font-size: 0.88rem; color: #64748b; margin-bottom: 0;">
+              📩 You will receive an automated confirmation email once your user ID and all associated server records have been purged.
+            </p>
           </div>
         </section>
 
-        <section class="legal-section">
-          <h2 class="legal-section-title">What Data Is Permanently Deleted?</h2>
-          <p class="legal-text">When you delete your account, the following data is permanently erased and cannot be recovered:</p>
+        <!-- Section 3: Data Deleted -->
+        <section class="legal-section" id="data-deleted">
+          <h2 class="legal-section-title">3. What Data Is Permanently Deleted?</h2>
+          <p class="legal-text">Upon executing an account deletion request, the following records are permanently and irretrievably destroyed:</p>
           <ul class="legal-list">
-            <li><strong>Firebase Authentication Account:</strong> Your cloud user identity, email, authentication tokens, and profile records.</li>
-            <li><strong>Cloud Vault Documents:</strong> All encrypted ciphertext envelopes, device records, and sync logs stored in Google Cloud Firestore.</li>
-            <li><strong>Device Trust Tokens:</strong> Hardware enrollment public keys and device pairing cryptographic envelopes.</li>
-            <li><strong>Subscription Linkage:</strong> App user ID associations in RevenueCat are terminated, resetting your cloud profile to a clean slate.</li>
+            <li><strong>Authentication Identity:</strong> Firebase Authentication user record, UID, registered email, and authentication tokens.</li>
+            <li><strong>Cloud Vault Documents:</strong> All encrypted ciphertext envelopes, initialization vectors (IVs), salt values, and item metadata stored in Google Cloud Firestore.</li>
+            <li><strong>Hardware Device Trust Records:</strong> Asymmetric ECDSA public keys, enrolled device UUIDs, device pairing envelopes, and rotation logs.</li>
+            <li><strong>Subscription Linkage:</strong> RevenueCat customer identification records and entitlement links, reverting your profile state to a completely unlinked account.</li>
           </ul>
         </section>
 
-        <section class="legal-section">
-          <h2 class="legal-section-title">What Data Is Retained?</h2>
+        <!-- Section 4: Data Retained -->
+        <section class="legal-section" id="data-retained">
+          <h2 class="legal-section-title">4. What Data Is Retained?</h2>
           <p class="legal-text">
-            <strong>Zero user credentials or vault items are retained.</strong> Because VaultGuard uses zero-knowledge end-to-end encryption, we never had access to your plaintext passwords, cards, or notes in the first place, and all encrypted cloud storage is purged immediately.
+            <strong>Zero user credentials, passwords, or personal data are retained.</strong> Because VaultGuard utilizes zero-knowledge client-side encryption (AES-256-GCM), we never held plaintext passwords, credentials, notes, or payment card details on our servers in the first place.
           </p>
-          <p class="legal-text">
-            <em>Note on Google Play Subscriptions:</em> Deleting your VaultGuard account does not automatically cancel an active Google Play subscription. To stop upcoming billing cycles from Google, please manage or cancel your active subscription in Google Play Store under <em>Profile &rarr; Payments & subscriptions &rarr; Subscriptions</em>.
-          </p>
+          <div style="background: #fffbeb; border: 1px solid #fef3c7; border-radius: 10px; padding: 16px; margin: 16px 0;">
+            <p class="legal-text" style="color: #92400e; margin-bottom: 0; font-size: 0.9rem;">
+              <strong>⚠️ Google Play Subscription Notice:</strong> Deleting your VaultGuard account destroys all server data, but does <em>not</em> automatically cancel an active Google Play subscription managed by Google. To prevent recurring charges from Google, please open <strong>Google Play Store &rarr; Profile &rarr; Payments &amp; Subscriptions &rarr; Subscriptions</strong> and cancel your VaultGuard Pro subscription.
+            </p>
+          </div>
         </section>
 
-        <section class="legal-section">
-          <h2 class="legal-section-title">Data Retention Period</h2>
+        <!-- Section 5: Retention Period -->
+        <section class="legal-section" id="retention-period">
+          <h2 class="legal-section-title">5. Data Retention Period</h2>
           <p class="legal-text">
-            <strong>Retention Period: 0 Days (Immediate).</strong> Deletion requests executed in-app take effect instantly. Deletion requests submitted via email are verified and executed within a maximum of 48 hours.
+            <strong>Retention Period: 0 Days (Immediate).</strong>
           </p>
+          <ul class="legal-list">
+            <li><strong>In-App Deletion:</strong> Takes effect immediately and synchronously.</li>
+            <li><strong>Email Requests:</strong> Processed and verified within a maximum of 48 hours.</li>
+            <li><strong>Backup Lifecycles:</strong> Ephemeral server backup caches undergo automatic purging in accordance with Google Cloud Firestore standard backup rotation (maximum 30 days).</li>
+          </ul>
         </section>
 
-        <section class="legal-section">
-          <h2 class="legal-section-title">Contact Us</h2>
+        <!-- Section 6: Contact Information -->
+        <section class="legal-section" id="contact-support">
+          <h2 class="legal-section-title">6. Privacy &amp; Data Protection Contact</h2>
           <p class="legal-text">
-            For any inquiries regarding data deletion or privacy practices, contact:
+            If you have questions regarding this deletion policy, data handling, or wish to follow up on a deletion request:
           </p>
           <p class="legal-text">
             <strong>Developer:</strong> VaultGuard Security Engineering / Junaid Ikram<br />
-            <strong>Compliance Email:</strong> <a href="mailto:junaidikram17@gmail.com" style="color: var(--accent-primary);">junaidikram17@gmail.com</a><br />
-            <strong>Privacy Policy:</strong> <a href="privacy.html" style="color: var(--accent-primary);">View Privacy Policy</a>
+            <strong>Compliance Email:</strong> <a href="mailto:junaidikram17@gmail.com" style="color: var(--accent-primary); font-weight: 600;">junaidikram17@gmail.com</a><br />
+            <strong>Store Listing:</strong> VaultGuard-Password Manager on Google Play
           </p>
         </section>
+
+        <!-- Cross-Page Legal Navigation Bar -->
+        <div class="legal-nav-bar">
+          <a href="privacy.html">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Privacy Policy</span>
+          </a>
+          <a href="terms.html">
+            <span>Terms of Service</span>
+          </a>
+          <a href="index.html">
+            <span>Return to Homepage</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
       </div>
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- Global Footer -->
   <footer class="footer">
     <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" style="margin-bottom: 12px; display: inline-flex;">
+            <img src="logo.png" alt="VaultGuard" class="brand-logo-img" style="width: 28px; height: 28px;" />
+            <span>VaultGuard</span>
+          </a>
+          <p class="footer-brand-desc">
+            A zero-knowledge, offline-first password and identity manager built for defense-in-grade privacy and multi-device synchronization.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#security">Security</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Legal &amp; Compliance</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete-account.html" style="color: var(--accent-primary); font-weight: 600;">Delete Account</a></li>
+            <li><a href="mailto:junaidikram17@gmail.com">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
       <div class="footer-bottom">
         <p>&copy; <span class="current-year">2026</span> VaultGuard-Password Manager. All rights reserved.</p>
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
