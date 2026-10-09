@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — VaultGuard-Password Manager</title>
+  <meta name="description" content="Official Privacy Policy for VaultGuard-Password Manager. Learn about our zero-knowledge architecture, client-side encryption, and strict data privacy commitments." />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self';" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="VaultGuard Logo" class="brand-logo-img" />
+        <span>VaultGuard</span>
+        <span class="brand-badge">Password Manager</span>
+      </a>
+      <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation menu" id="mobileMenuBtn" aria-expanded="false">
+        <svg class="menu-open-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="menu-close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Privacy Policy Content -->
+  <main class="legal-page">
+    <div class="container">
+      <div class="legal-card">
+        <header class="legal-header">
+          <h1 class="legal-title">Privacy Policy</h1>
+          <p class="legal-meta">Effective Date: September 2026 • Last Updated: October 2026</p>
+        </header>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">1. Absolute Zero Data Monetization & Zero Plaintext Guarantee</h2>
+          <p class="legal-text">
+            At <strong>VaultGuard-Password Manager</strong>, privacy is not a feature — it is the fundamental mathematical foundation of our software architecture. 
+            We do not collect, sell, lease, rent, trade, or monetize your personal information, credentials, payment card details, identities, or secure notes to any third party, data broker, advertising network, or corporate partner.
+          </p>
+          <p class="legal-text">
+            All encryption operations take place strictly on your local hardware device before any information is stored or transmitted. We possess <strong>zero mathematical ability</strong> to read, decrypt, or inspect your stored data.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">2. Cryptographic Architecture & Client-Side Encryption</h2>
+          <p class="legal-text">
+            VaultGuard employs defense-in-grade, end-to-end zero-knowledge cryptography:
+          </p>
+          <ul class="legal-list">
+            <li><strong>AES-256-GCM Authenticated Encryption:</strong> Every item is individually sealed using AES-256 in Galois/Counter Mode with 96-bit cryptographically random initialization vectors (IVs) and canonical Associated Authenticated Data (AAD) to prevent bit-flipping attacks.</li>
+            <li><strong>PBKDF2 Key Derivation:</strong> Your Master Password is protected with PBKDF2 using HMAC-SHA256 and <strong>600,000 iterations</strong>, exceeding NIST recommendations to prevent brute-force and dictionary attacks.</li>
+            <li><strong>Zero Plaintext in Cloud:</strong> When optional multi-device cloud synchronization is activated, Google Cloud Firestore receives only opaque ciphertext envelopes, initialization vectors, and version counters. Item titles, usernames, passwords, URLs, notes, and categories exist purely within encrypted blobs.</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">3. Account Information & Data Collection Scope</h2>
+          <p class="legal-text">
+            We minimize collected data to the absolute technical minimum required to facilitate account authentication and subscription licensing:
+          </p>
+          <ul class="legal-list">
+            <li><strong>Email Address:</strong> If you choose to enable multi-device cloud sync, your email address is used solely for Firebase Authentication to identify your cloud account.</li>
+            <li><strong>Subscription Tokens:</strong> Subscription tier validation is processed via Google Play In-App Billing and RevenueCat. Payment details (credit card numbers, billing addresses) are handled directly by Google Play and never touch VaultGuard servers.</li>
+            <li><strong>Device Identity Tokens:</strong> Cryptographically generated asymmetric ECDSA P-256 public keys represent enrolled devices for hardware authorization and revocation.</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">4. Android AutoFill & System Permissions</h2>
+          <p class="legal-text">
+            To provide seamless credential autofilling on Android devices, VaultGuard requests the standard <code>AutofillService</code> permission:
+          </p>
+          <ul class="legal-list">
+            <li>The autofill service inspects app package names and browser web domains strictly to query your local encrypted vault for matching saved credentials.</li>
+            <li>VaultGuard <strong>never</strong> records background keystrokes, monitors screen activity outside password fields, or transmits autofill events over the internet.</li>
+            <li>Authentication is verified strictly through your secure Master Password or device PIN. Sensitive key material is evicted from device memory immediately upon screen lock or vault closure.</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">5. Zero Third-Party Trackers & Telemetry</h2>
+          <p class="legal-text">
+            VaultGuard contains:
+          </p>
+          <ul class="legal-list">
+            <li><strong>Zero</strong> third-party advertising SDKs or frameworks.</li>
+            <li><strong>Zero</strong> commercial analytics or behavioral user tracking tools (no Google Analytics, no Facebook SDK, no advertising trackers).</li>
+            <li><strong>Zero</strong> cross-app identifiers or telemetry.</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">6. Clipboard Security & Auto-Clear Hygiene</h2>
+          <p class="legal-text">
+            When you copy a password, credit card number, or sensitive field to your device clipboard, VaultGuard automatically schedules a background timeout (default 30 seconds) to wipe your clipboard, mitigating interception by unauthorized background applications.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">7. GDPR & CCPA Compliance: Your Rights</h2>
+          <p class="legal-text">
+            Under global privacy standards, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), you retain complete sovereignty over your data:
+          </p>
+          <ul class="legal-list">
+            <li><strong>Right to Portability:</strong> You can export your full vault database at any time as an encrypted AEAD JSON backup or unencrypted archive.</li>
+            <li><strong>Right to Permanent Erasure:</strong> Inside the app, navigating to <em>Settings &rarr; Cloud Settings &rarr; Delete Cloud Account & All Data</em> immediately triggers permanent deletion of your cloud vault, authentication credentials, enrolled devices, and account metadata across all cloud servers.</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">8. Contact Information</h2>
+          <p class="legal-text">
+            If you have questions, inquiries, or privacy concerns regarding this Privacy Policy or VaultGuard-Password Manager, please contact our compliance team:
+          </p>
+          <p class="legal-text">
+            <strong>Email:</strong> <a href="mailto:junaidikram17@gmail.com" style="color: var(--accent-primary);">junaidikram17@gmail.com</a><br />
+            <strong>Developer:</strong> VaultGuard Security Engineering
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> VaultGuard-Password Manager. All rights reserved.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+          <a href="privacy.html" style="color: var(--accent-primary); text-decoration: none; font-weight: 600;">Privacy Policy</a>
+          <a href="terms.html" style="color: var(--text-secondary); text-decoration: none;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

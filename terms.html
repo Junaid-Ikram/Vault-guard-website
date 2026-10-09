@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — VaultGuard-Password Manager</title>
+  <meta name="description" content="Terms of Service for VaultGuard-Password Manager. Learn about our zero-knowledge custody terms, subscription conditions, and acceptable use guidelines." />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self';" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="VaultGuard Logo" class="brand-logo-img" />
+        <span>VaultGuard</span>
+        <span class="brand-badge">Password Manager</span>
+      </a>
+      <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation menu" id="mobileMenuBtn" aria-expanded="false">
+        <svg class="menu-open-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="menu-close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Terms Content -->
+  <main class="legal-page">
+    <div class="container">
+      <div class="legal-card">
+        <header class="legal-header">
+          <h1 class="legal-title">Terms of Service</h1>
+          <p class="legal-meta">Effective Date: September 2026 • Last Updated: October 2026</p>
+        </header>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">1. Zero-Knowledge Architecture & Encryption Scope</h2>
+          <p class="legal-text">
+            VaultGuard provides zero-knowledge password and digital identity management. All encryption (AES-256-GCM with 96-bit unique IVs) and key derivation (PBKDF2 with HMAC-SHA256 and 600,000 iterations) occurs exclusively on your local device hardware before any data is saved or transmitted. 
+          </p>
+          <p class="legal-text">
+            VaultGuard developers, cloud operators, and automated services possess zero mathematical ability to decrypt, read, or inspect your credentials, card details, or notes under any circumstances.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">2. Master Password & 24-Word Recovery Key Sole Custody</h2>
+          <p class="legal-text">
+            You maintain sole custody and responsibility for your Master Password and emergency 24-word Recovery Key. Because VaultGuard employs strict zero-knowledge cryptography, lost credentials cannot be recovered, bypassed, or reset by customer support. If both your Master Password and Recovery Key are lost, encrypted vault contents are permanently irretrievable.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">3. Subscriptions, Free Trial & Billing Terms</h2>
+          <p class="legal-text">
+            VaultGuard offers both free and optional auto-renewing Pro subscription plans:
+          </p>
+          <ul class="legal-list">
+            <li><strong>Free Tier:</strong> Includes 1 device offline-first encrypted storage, master password protection, and password generator.</li>
+            <li><strong>Pro Monthly (Rs. 250 / month):</strong> Unlocks real-time cloud synchronization on up to 10 devices, unlimited custom categories, emergency recovery key regeneration, vault entry rewrap/repair, and encrypted backup portability. Includes a 30-Day Free Trial.</li>
+            <li><strong>Pro Annual (Rs. 2,000 / year):</strong> Includes all features of Pro Monthly, plus Master Password Uninstall Protection (Device Administrator security). Includes a 30-Day Free Trial.</li>
+            <li><strong>Trial Conversion & Cancellation:</strong> If you start a 30-Day Free Trial, you will not be charged until the 30-day period expires. You may cancel recurring payments at any time directly through Google Play Subscriptions (<em>Google Play Store &rarr; Payments & Subscriptions</em>). Cancelling stops future renewal while preserving Pro access until the current billing cycle ends.</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">4. Anti-Sabotage Clause (Local Reset vs. Cloud Isolation)</h2>
+          <p class="legal-text">
+            Executing "Reset Vault & Start Fresh" or clearing local application data strictly purges local device storage and rotates local device identity on that specific hardware unit. A local reset does NOT delete or compromise entries stored in your cloud vault. Any vault subsequently initialized on a reset device begins in an isolated state and cannot overwrite prior cloud data without authenticated credentials.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">5. Multi-Device Trust & Device Revocation</h2>
+          <p class="legal-text">
+            Connecting multiple devices establishes cryptographically verified hardware identity (ECDSA P-256) and ephemeral key exchanges (ECDH P-256). You maintain the unrestricted right to revoke any lost, stolen, or untrusted hardware from any authorized device at any time. Revocation triggers instant rotation of the Vault Encryption Key (VEK), locking out the compromised device permanently.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">6. Disclaimer of Warranties & Limitation of Liability</h2>
+          <p class="legal-text">
+            VaultGuard is provided "AS IS" and "AS AVAILABLE" without express or implied warranties. While built with defense-in-grade security, VaultGuard is not liable for data loss resulting from device hardware failure, forgotten passwords, lost recovery keys, or malicious operating system tampering (e.g. rooted malware or hardware keyloggers).
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2 class="legal-section-title">7. Contact & Support</h2>
+          <p class="legal-text">
+            For questions regarding these Terms of Service or billing inquiries, please contact:
+          </p>
+          <p class="legal-text">
+            <strong>Email:</strong> <a href="mailto:junaidikram17@gmail.com" style="color: var(--accent-primary);">junaidikram17@gmail.com</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> VaultGuard-Password Manager. All rights reserved.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+          <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none;">Privacy Policy</a>
+          <a href="terms.html" style="color: var(--accent-primary); text-decoration: none; font-weight: 600;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

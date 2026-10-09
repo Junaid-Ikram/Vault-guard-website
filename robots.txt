@@ -1,0 +1,8 @@
+# VaultGuard-Password Manager Robots Policy
+User-agent: *
+Allow: /
+Allow: /privacy.html
+Allow: /terms.html
+Disallow: /404.html
+Disallow: /_headers
+Disallow: /_redirects

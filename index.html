@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VaultGuard-Password Manager — Zero-Knowledge Security</title>
+  <meta name="description" content="VaultGuard-Password Manager is a defense-in-grade, zero-knowledge offline-first password manager with AES-256-GCM encryption and multi-device cloud sync." />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self';" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="VaultGuard Logo" class="brand-logo-img" />
+        <span>VaultGuard</span>
+        <span class="brand-badge">Password Manager</span>
+      </a>
+      <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation menu" id="mobileMenuBtn" aria-expanded="false">
+        <svg class="menu-open-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="menu-close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="#download" class="nav-cta">Get App</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <img src="logo.png" alt="VaultGuard App Logo" class="hero-logo-center" />
+      <div class="badge-pill">
+        <span class="badge-dot"></span>
+        <span>Zero-Knowledge Defense-in-Grade Architecture</span>
+      </div>
+      <h1 class="hero-title">
+        Your Passwords Sealed With <br />
+        <span class="gradient-text">End-to-End AES-256-GCM Encryption</span>
+      </h1>
+      <p class="hero-subtitle">
+        VaultGuard-Password Manager secures passwords, payment cards, identities, and encrypted notes directly on your device using authenticated AES-256-GCM and PBKDF2 key stretching. All encryption occurs locally on your device hardware with zero server access to your plaintext.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.609 1.814L13.793 12 3.61 22.186a2.023 2.023 0 0 1-.22-.383C3.136 21.2 3 20.449 3 19.5V4.5c0-.95.136-1.7.39-2.303.064-.15.138-.28.219-.383zm11.605 11.605l2.222 2.222-12.027 6.837 9.805-9.059zm0-2.838L5.409 1.522l12.027 6.837-2.222 2.222zm1.414 1.414l3.702 2.105c.877.498.877 1.309 0 1.808l-3.702 2.105-2.23-2.23 2.23-2.23z"/>
+          </svg>
+          <span>Get on Google Play</span>
+        </a>
+
+        <div class="btn btn-secondary" style="cursor: default; opacity: 0.85;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-2 0.6-2.65 1.35-.58.66-1.09 1.73-.95 2.76 1.01.08 2.05-.51 2.67-1.26z"/>
+          </svg>
+          <span>iOS App Store</span>
+          <span class="btn-pill-tag">Coming Soon</span>
+        </div>
+
+        <a href="#pricing" class="btn btn-secondary">
+          <span>View Pricing & Free Trial</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="trust-bar">
+        <div class="trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>AES-256-GCM Authenticated Encryption</span>
+        </div>
+        <div class="trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>PBKDF2 600,000 Iterations</span>
+        </div>
+        <div class="trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Zero Plaintext in Cloud</span>
+        </div>
+        <div class="trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>No Ads or Trackers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Core Capabilities</span>
+        <h2 class="section-title">Built Without Compromise for Absolute Security</h2>
+        <p class="section-desc">Everything you need to secure your credentials across your devices, protected by zero-knowledge cryptographic verification.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Card 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Zero-Knowledge Hardware Vault</h3>
+          <p class="feature-text">Your vault encryption key never leaves your device unencrypted. Not even our servers or engineers can view your passwords or recovery data.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Android AutoFill Framework</h3>
+          <p class="feature-text">Instantly autofill logins, credit cards, and secure notes across Android apps and Chrome browsers with authenticated master passkey protection.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Multi-Device Cloud Sync</h3>
+          <p class="feature-text">Synchronize seamlessly across up to 10 authorized devices with instant end-to-end encrypted change detection and zero plaintext leakage.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Master Password Protection</h3>
+          <p class="feature-text">Annual subscription includes Master Password Uninstall Protection (Device Administrator) to prevent unauthorized app uninstallation or device tampering.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+              <polyline points="16 6 12 2 8 6"/>
+              <line x1="12" y1="2" x2="12" y2="15"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Encrypted Backup Portability</h3>
+          <p class="feature-text">Export and import full encrypted AEAD backups anytime. Complete data ownership with zero platform lock-in.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Clipboard Auto-Clear Hygiene</h3>
+          <p class="feature-text">Automatic 30-second clipboard clearing ensures copied passwords and card numbers are never intercepted by background apps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Architecture Section -->
+  <section id="security" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cryptographic Standards</span>
+        <h2 class="section-title">Zero-Knowledge Cryptographic Architecture</h2>
+        <p class="section-desc">Designed according to Zero Trust principles: all cryptographic operations take place client-side so our cloud infrastructure never receives unencrypted data.</p>
+      </div>
+
+      <div class="architecture-box">
+        <div>
+          <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 16px;">Engineered for Zero-Knowledge Defense</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+            Every stored record is individually sealed on your hardware device using AES-256 in Galois/Counter Mode with 96-bit initialization vectors (IVs) and canonical Associated Authenticated Data (AAD). Master passwords undergo 600,000 PBKDF2-HMAC-SHA256 iterations to resist offline brute-force attacks.
+          </p>
+          <div style="display: flex; gap: 16px;">
+            <a href="privacy.html" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 20px;">Read Privacy Policy</a>
+            <a href="terms.html" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 20px;">Terms of Service</a>
+          </div>
+        </div>
+
+        <div>
+          <ul class="arch-spec-list">
+            <li class="arch-spec-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <strong>AES-256-GCM Authenticated Encryption</strong>
+                <p>The industry benchmark for symmetric cryptography, guaranteeing confidentiality and tamper-evident authentication for every record.</p>
+              </div>
+            </li>
+            <li class="arch-spec-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <strong>PBKDF2-HMAC-SHA256 (600,000 Iterations)</strong>
+                <p>Exceeds NIST recommendations for key derivation, effectively safeguarding against dictionary and GPU cracking clusters.</p>
+              </div>
+            </li>
+            <li class="arch-spec-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <strong>ECDSA P-256 Device Identity & Ephemeral ECDH</strong>
+                <p>Asymmetric hardware keys authenticate enrolled devices and enable instant Vault Encryption Key (VEK) rotation if a device is revoked.</p>
+              </div>
+            </li>
+            <li class="arch-spec-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <strong>Zero-Plaintext Multi-Device Sync</strong>
+                <p>Cloud datastores receive exclusively encrypted ciphertext blobs, IVs, and version counters — no plaintext ever leaves your device.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simple & Transparent</span>
+        <h2 class="section-title">Transparent Plans. No Hidden Costs.</h2>
+        <p class="section-desc">Start free or unlock seamless multi-device synchronization with our risk-free 30-Day Free Trial.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- 1. Free Tier -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <h3 class="plan-name">Free Tier</h3>
+            <p class="plan-desc">Single device offline-first zero-knowledge vault.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">Rs.</span>
+              <span class="plan-amount">0</span>
+              <span class="plan-period">/ forever</span>
+            </div>
+          </div>
+
+          <ul class="plan-features">
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>1 Device capacity</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>AES-256-GCM hardware vault</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Android AutoFill integration</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Master Password & PIN protection</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Strong password & passphrase generator</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Automatic 30-sec clipboard clearing</span>
+            </li>
+          </ul>
+
+          <a href="#download" class="btn btn-secondary" style="width: 100%;">Install Free App</a>
+        </div>
+
+        <!-- 2. Pro Monthly -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <h3 class="plan-name">Pro Monthly</h3>
+            <p class="plan-desc">Multi-device sync with total flexibility.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">Rs.</span>
+              <span class="plan-amount">250</span>
+              <span class="plan-period">/ month</span>
+            </div>
+            <div class="plan-trial-badge">🎉 30-Day Free Trial Included</div>
+          </div>
+
+          <ul class="plan-features">
+            <li class="plan-feature-item highlight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Cloud sync up to 10 devices maximum</span>
+            </li>
+            <li class="plan-feature-item highlight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Create multiple custom categories</span>
+            </li>
+            <li class="plan-feature-item highlight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Repair and rewrap vault entries</span>
+            </li>
+            <li class="plan-feature-item highlight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Regenerate 24-word emergency recovery key</span>
+            </li>
+            <li class="plan-feature-item highlight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Export & import encrypted AEAD backups</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Instant lost hardware device revocation</span>
+            </li>
+          </ul>
+
+          <a href="#download" class="btn btn-secondary" style="width: 100%;">Start 30-Day Free Trial</a>
+        </div>
+
+        <!-- 3. Pro Annual (Featured) -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge-popular">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span>Best Value • Save 33%</span>
+          </div>
+          <div class="plan-header">
+            <h3 class="plan-name">Pro Annual</h3>
+            <p class="plan-desc">Maximum security with anti-tamper protection.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">Rs.</span>
+              <span class="plan-amount">2,000</span>
+              <span class="plan-period">/ year</span>
+              <span class="plan-save-chip">Save 33%</span>
+            </div>
+            <div class="plan-trial-badge">🎉 30-Day Free Trial Included</div>
+          </div>
+
+          <ul class="plan-features">
+            <li class="plan-feature-item highlight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Everything included in Pro Monthly</strong></span>
+            </li>
+            <li class="plan-feature-item highlight" style="color: var(--accent-primary); font-weight: 700;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>🛡️ Master Password Uninstall Protection (Device Administrator)</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Cloud sync on up to 10 devices maximum</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Multiple custom categories</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Repair and rewrap vault entries</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Regenerate 24-word recovery key</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Export/import encrypted backups</span>
+            </li>
+          </ul>
+
+          <a href="#download" class="btn btn-primary" style="width: 100%;">Start 30-Day Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Everything you need to know about VaultGuard's security model, plans, and zero-knowledge guarantee.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can VaultGuard employees or servers see my passwords?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            No. Never. VaultGuard operates on a strict Zero-Knowledge architecture. Your Master Password is used to derive encryption keys locally via PBKDF2 (600,000 iterations), and all entries are encrypted with AES-256-GCM on your device. We receive only encrypted ciphertext blobs.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the 30-Day Free Trial work?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Both the Monthly (Rs. 250/mo) and Annual (Rs. 2,000/yr) Pro plans include a 30-Day Free Trial. You can explore full 10-device sync, custom categories, and backups without being charged. If you cancel before the 30 days end via Google Play Subscriptions, you will never be charged.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is Master Password Uninstall Protection?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Included exclusively in the Annual plan, Uninstall Protection leverages Android's Device Administrator security to prevent anyone from deleting or tampering with VaultGuard on your phone without verifying your Master Password first.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What happens if I lose my Master Password?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Because we do not know your password, we cannot reset it for you. However, when you set up VaultGuard, you are given a 24-word emergency recovery key. As long as you have your 24 words, you can restore your vault even if you forget your master password.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I cancel my subscription?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Subscriptions are managed transparently by Google Play. Inside the app, go to Settings &rarr; Subscription & Plans and tap "Manage on Google Play" to cancel or change your plan anytime in 1 tap.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA Section -->
+  <section id="download" class="section">
+    <div class="container">
+      <div class="download-card">
+        <h2 class="download-title">Protect Your Digital Life Today</h2>
+        <p class="download-desc">
+          Download VaultGuard-Password Manager now on Android. Experience true zero-knowledge privacy with automatic autofill and zero surveillance.
+        </p>
+
+        <div class="hero-actions" style="margin-bottom: 0;">
+          <a href="https://play.google.com/store/apps/details?id=com.vaultguard.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3.609 1.814L13.793 12 3.61 22.186a2.023 2.023 0 0 1-.22-.383C3.136 21.2 3 20.449 3 19.5V4.5c0-.95.136-1.7.39-2.303.064-.15.138-.28.219-.383zm11.605 11.605l2.222 2.222-12.027 6.837 9.805-9.059zm0-2.838L5.409 1.522l12.027 6.837-2.222 2.222zm1.414 1.414l3.702 2.105c.877.498.877 1.309 0 1.808l-3.702 2.105-2.23-2.23 2.23-2.23z"/>
+            </svg>
+            <span>Download on Google Play</span>
+          </a>
+
+          <div class="btn btn-secondary" style="cursor: default; opacity: 0.85;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-2 0.6-2.65 1.35-.58.66-1.09 1.73-.95 2.76 1.01.08 2.05-.51 2.67-1.26z"/>
+            </svg>
+            <span>iOS App Store</span>
+            <span class="btn-pill-tag">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" style="margin-bottom: 12px; display: inline-flex;">
+            <img src="logo.png" alt="VaultGuard" class="brand-logo-img" style="width: 28px; height: 28px;" />
+            <span>VaultGuard</span>
+          </a>
+          <p class="footer-brand-desc">
+            A zero-knowledge, offline-first password and identity manager built for defense-in-grade privacy and multi-device synchronization.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Legal & Contact</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:junaidikram17@gmail.com">junaidikram17@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> VaultGuard-Password Manager. All rights reserved.</p>
+        <p style="font-size: 0.8rem;">AES-256-GCM • PBKDF2 600K • Zero-Knowledge</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
